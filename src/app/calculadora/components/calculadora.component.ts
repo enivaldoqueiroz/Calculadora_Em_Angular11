@@ -89,13 +89,13 @@ export class CalculadoraComponent implements OnInit {
           this.operacao = operacao;
           return;
         }
-        /** Caso operação definida e numero 2 selecionado,
+      /** Caso operação definida e numero 2 selecionado,
       * efetua o calculo da operação
       */
      if (this.numero2 !== null){
       this.resultado = this.calculadoraService.calcular(
-        perseFloat(this.numero1),
-        perseFloat(this.numero2),
+        parseFloat(this.numero1),
+        parseFloat(this.numero2),
         this.operacao);
        this.operacao = operacao;
        this.numero1 = this.resultado.toString();
@@ -113,8 +113,8 @@ export class CalculadoraComponent implements OnInit {
           return;
         }
         this.resultado = this.calculadoraService.calcular(
-          perseFloat(this.numero1),[
-          perseFloat(this.numero2),
+          parseFloat(this.numero1),
+          parseFloat(this.numero2),
           this.operacao);
       }
 
